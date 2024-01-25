@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color Generator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            border: 1px solid black;
+            /* margin: auto; */
+
+            
+            
+        }
+        #box2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black
+            
+        }
+        #box3{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 1px solid black;
+        }
+        #box4{
+            width: 100px;
+            height: 100px;
+            background-color: #d4f30a;
+            border: 1px solid black;
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box1" id="box1"><h1></h1></div>
+        <div class="box1" id="box2"></div>
+        <div class="box1" id="box3"></div>
+        <div class="box1" id="box4"></div>
+        
+    </div>
+    <h1>Color Generator</h1>
+    <p>click on bottom</p>
+
+    <script>
+        const btn = document.querySelectorAll('.box1')
+        const body = document.querySelector('body')
+        // console.log(btn)
+
+        btn.forEach(function(bottoms){
+            bottoms.addEventListener('click', function(e){
+                console.log(e)
+                console.log(e.target)
+                if(e.target == box1){
+                    body.style.backgroundColor = 'grey'
+                }
+                if(e.target == box2){
+                    body.style.backgroundColor = 'red'
+                }
+                if(e.target == box3){
+                    body.style.backgroundColor = 'blue'
+                }
+                if(e.target == box4){
+                    body.style.backgroundColor = '#d4f30a'
+                }
+                
+                
+
+            })
+        })
+           
+        
+            
+            
+            
+            
+
+        
+    </script>
+</body>
+</html>
